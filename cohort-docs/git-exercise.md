@@ -56,6 +56,3 @@ On GitHub:
 In terminal:
 
 1. Paste commands to push your commits up to this repository
-
-
-

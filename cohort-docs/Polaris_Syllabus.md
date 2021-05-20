@@ -3,7 +3,7 @@
 ## Contact
 
 For any questions, comments, or concerns related to the classroom, please email
-[oberon-staff@codeup.com](oberon-staff@codeup.com).
+[polaris-staff@codeup.com](polaris-staff@codeup.com).
 
 ## Topics Covered
 
@@ -102,7 +102,7 @@ prepare for the current day.
 Please do come to class early if you want to hang out, ask questions, 
 or listen to our questionable taste in music.
 
-If you are not going to be present for any reason, email [oberon-staff@codeup.com](oberon-staff@codeup.com)
+If you are not going to be present for any reason, email [polaris-staff@codeup.com](polaris-staff@codeup.com)
 to let us know.
 
 #### Classroom Hours:
@@ -130,11 +130,11 @@ The primary way to get your questions answered is by asking them in the
 classroom during classroom hours both during lecture and exercise time.
 Instructors and student fellows will be available to help you.
 
-Outside of classroom hours, email [oberon-staff@codeup.com](oberon-staff@codeup.com) or send a Slack message to the #oberon-questions channel for help with your
+Outside of classroom hours, email [polaris-staff@codeup.com](polaris-staff@codeup.com) or send a Slack message to the #polaris-questions channel for help with your
 questions. 
 
 When emailing for support, please be sure to include all instructors
-in the email through the [oberon-staff@codeup.com](oberon-staff@codeup.com) list, as opposed to emailing an
+in the email through the [polaris-staff@codeup.com](polaris-staff@codeup.com) list, as opposed to emailing an
 individual instructor.
 
 In addition, you may schedule time with a TA or
@@ -169,27 +169,33 @@ but should provide a rough outline of the class pacing.
 
 | Week Of    | Topic                      |
 |------------|----------------------------|
-| (01) 4/12  | JavaScript I               |
-| (02) 04/19 |                            |
-| (03) 05/03 | HTML/CSS                   |
-| (04) 5/10  | Javascript I (continued)   |
-| (05) 05/17 | jQuery                     |
-| (06) 05/24 |                            |
-| (07) 06/01 | JavaScript II              |
-| (08) 06/07 | Java I                     |
-| (09) 06/14 | Java II                    |
-| (10) 06/21 |                            |
-| (11) 06/28 | MySQL                      |
-| (12) 07/06 |                            |
-| (13) 07/13 |                            |
-| (14) 07/12 | Java III                   |
-| (15) 07/19 |                            |
-| (16) 07/26 | Spring                     |
-| (17) 08/02 |                            |
-| (18) 08/09 | Capstones                  |
-| -break to- | ------------------         |
-| (24) 09/20 | Capstone Review Panels     |
-| (25) 09/27 | Developer Day (10/1)       |
+| (01) 5/24  | JavaScript I               |
+| (02) 06/01 |                            |
+| (03) 06/07 | HTML                       |
+| (04) 06/14 | CSS                        |
+| (05) 06/21 |                            |
+| (06) 06/28 | Javascript I (continued)   |
+| (07) 07/06 | jQuery                     |
+| (08) 07/12 | JavaScript II              |
+| (09) 07/19 | Java I                     |
+| (10) 07/26 |                            |
+| (11) 08/02 | Java II                    |
+| (12) 08/09 |                            |
+| (13) 08/16 | MySQL                      |
+| (14) 08/23 | Java III                   |
+| (15) 08/30 |                            |
+| (16) 09/07 | Spring                     |
+| (17) 09/13 |                            |
+| (18) 09/20 |                            |
+| (19) 09/27 | Capstones                  |
+| (20) 10/04 |                            |
+| (21) 10/12 |                            |
+| (22) 10/18 |                            |
+| (23) 10/25 |                            |
+| (24) 11/01 |                            |
+| (25) 11/08 | Review Panels              |
+| (26) 11/15 | Developer Day (11/16)      |
+
 
 
 <div style="page-break-after: always;"></div>
@@ -198,14 +204,17 @@ but should provide a rough outline of the class pacing.
 
 |            Date | Event                               |
 |-----------------|-------------------------------------|
-|          Apr 30 | Staff Day - No Class                |
 |          May 28 | Staff Day - No Class                |
 |          May 31 | Memorial Day - No Class             |
 |          Jun 24 | Staff Day - No Class                |
 |          Jun 25 | Staff Day - No Class                |
-|          Jul 03 | Independence Day Weekend - No Class |
+|          Jul 02 | Independence Day Weekend - No Class |
 |          Jul 05 | Independence Day Weekend - No Class |
 |          Jul 30 | Staff Day - No Class                |
 |          Aug 27 | Staff Day - No Class                |
 |          Sep 06 | Labor Day - No Class                |
-|          Sep 24 | Staff Day - No Class                |
+|          Sep 24 | Labor Day - No Class                |
+|          Oct 11 | Indigenous Peoples Day - No Class   |
+|          Oct 29 | Staff Day - No Class                |
+|          Nov 11 | Veterans Day - No Class             |
+
