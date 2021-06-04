@@ -11,8 +11,8 @@ while (value < 65537) {
 }
 
 // Determine the total ice cream to be sold
-let random = Math.ceil(Math.random() * (100 - 50) + 50);
-console.log("Total to be sold: " + random);
+let totalCones = Math.ceil(Math.random() * (100 - 50) + 50);
+console.log("Total to be sold: " + totalCones);
 
 // running total
 let total = 0;
@@ -20,7 +20,11 @@ let total = 0;
 do {
     // How many cones were bought
     let bought = Math.ceil(Math.random() * (5 - 1) + 1);
+
+    if (total + bought > totalCones) {
+        continue;
+    }
     total = total + bought;
     console.log("Customer bought: " + bought);
     console.log("Total Sold: " + total);
-} while (total < random);
+} while (total < totalCones);
