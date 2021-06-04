@@ -11,11 +11,15 @@ while (true) {
     }
 }
 
+console.log("Number to skip is" + number);
+
 for (let index = 0; index < 50; index++) {
     if (index == oddNumber) {
+        console.log("Yikes! Skipping number: " + index);
         continue
     }
-    if (index %2 !=0) {
-        console.log("Here is an odd number: " + index);
+    if (index %2 ==0) {
+        continue;
     }
+    console.log("Here is an odd number: " + index);
 }
