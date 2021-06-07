@@ -45,3 +45,5 @@ for (let number = 0; number < shapes.length; number++) {
 }
 
 let names = ["John", "Paul", "Ringo", "George"];
+
+
