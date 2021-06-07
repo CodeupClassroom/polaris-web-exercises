@@ -44,3 +44,4 @@ for (let number = 0; number < shapes.length; number++) {
     console.log('Here is a lovely shape: ' + shapes[number] + '.');
 }
 
+let names = ["John", "Paul", "Ringo", "George"];
