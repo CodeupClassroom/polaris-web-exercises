@@ -1,0 +1,47 @@
+h1 {
+    text-align: center;
+}
+
+h1, h2{
+    color: #007069;
+    text-decoration: underline;
+}
+
+body{
+    background-color: #333333;
+    background-image: url("../images/lowPolyBackground.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+ul > li {
+    list-style-type: square;
+}
+
+* {
+    font-family: 'Indie Flower', cursive;
+}
+
+td, tr {
+    padding: 10px;
+    font-size: 1em;
+}
+
+a {
+    color: #333333;
+    transition: 500ms;
+
+}
+
+a:hover {
+    color: #eeeeee;
+    font-size: 1.2em;
+    transition: 500ms;
+}
+
+a:visited {
+    color: #ca3a11;
+}
+
