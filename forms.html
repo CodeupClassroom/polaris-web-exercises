@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+
+<form method="post" action="You put your url here">
+
+    <label for="emailField">Email</label>
+    <input id="emailField" name="usersEmail" type="email" placeholder="Enter Email Here">
+
+    <br>
+
+    <label for="passwordField">Password</label>
+    <input id="passwordField" name="usersPassword" type="password" placeholder="Enter Password Here">
+
+    <br>
+
+    <label for="bioField">Bio</label>
+    <textarea id="bioField" name="Bio">This is my bio.</textarea>
+
+    <br>
+
+    <section>
+
+        <h3>How did you hear about us?</h3>
+
+        <input id="billboard" type="radio" name="hearAbout" value="billboard">
+        <label for="billboard">Billboard</label>
+
+        <br>
+
+        <input id="radio_ad" type="radio" name="hearAbout" value="radio ad">
+        <label for="radio_ad">Radio Ad</label>
+
+        <br>
+
+        <input id="internet_ad" type="radio" name="hearAbout" value="internet ad">
+        <label for="internet_ad">Internet Ad</label>
+        <br>
+
+        <input id="other" type="radio" name="hearAbout" value="other">
+        <label for="other">Other</label>
+
+    </section>
+
+    <br>
+
+    <label for="browserType">What is your browser?</label>
+
+    <select id="browserType" name="Browser">
+        <option value="Google Chrome">Chrome</option>
+        <option value="Opera">Opera</option>
+        <option value="Edge">Edge</option>
+        <option value="Vivaldi">Vivaldi</option>
+        <option selected value="safari">Safari</option>
+        <option disabled value="Internet_Explorer">Internet_Explorer</option>
+    </select>
+
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
