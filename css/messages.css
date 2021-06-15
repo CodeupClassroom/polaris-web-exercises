@@ -13,10 +13,17 @@ body, html {
     border-radius: .5em;
     /*width: 100%;*/
 }
+/* Example of how we can set variables in our CSS */
+/* Good, When we need to use colors globally across the site. */
+:root{
+    --info-color: blue;
+    --info-bg-color: lightblue;
+}
 
 .message-info{
-    background-color: lightblue;
-    color: blue;
+    /* Example of using variables in CSS*/
+    background-color: var(--info-bg-color);
+    color: var(--info-color);
 }
 
 .message-success{
