@@ -1,4 +1,26 @@
-.fancy-header {
-    color: purple;
+.italic{
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+header h1 {
+    text-align : center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: green;
     text-decoration: underline;
+}
+
+body {
+    background-color: yellow;
+    font-family: "Apple Chancery"
+}
+
+li {
+    list-style: disc;
 }
