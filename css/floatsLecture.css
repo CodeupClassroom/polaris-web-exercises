@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    background-color: #aaaaaa;
+    justify-content: space-between;
+}
+
+.flex{
+    display: flex;
+}
+
+.nav-item{
+    padding: 5px;
+    font-size: larger;
+    transition: 1s;
+}
+
+
+
+.nav-item:hover{
+    transition: 1s;
+    background-color: #636868;
+    color: #aaaaaa;
+    cursor: pointer;
+}
+
+div.flex-container{
+    display: flex;
+
+}
+
+.flex-item{
+    border: solid 2px red;
+    align-content: baseline;
+    display: inherit;
+
+}
+
+.item-one{
+    display: inherit;
+    flex-grow: 1;
+    order: 2;
+}
+
+.item-two{
+    display: inherit;
+
+    flex-grow: 1;
+    order: 3;
+}
+
+.item-three{
+    display: inherit;
+
+    flex-grow: 1;
+    order: 1;
+}
