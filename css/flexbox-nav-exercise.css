@@ -10,11 +10,26 @@ body{
 nav{
     display: flex;
     justify-content: space-between;
+
     background-color: #636868;
 }
 
 .nav-items{
     display: flex;
+    justify-content: space-between;
+}
+
+.nav-items:nth-child(1){
+    flex-basis: 350px;
+}
+
+.nav-items:nth-child(2){
+
+}
+
+.nav-items:nth-child(3){
+    flex-basis: 350px;
+    justify-content: flex-end;
 }
 
 .nav-link{
@@ -29,11 +44,51 @@ nav{
 
 .nav-link > a:hover{
     padding: 0 5px;
-    color: #ffffff;
+    color: blue;
     text-decoration: none;
+}
+
+i{
+    padding: 0 10px;
 }
 
 p.logo{
     margin: 0 0 5px;
     font-size: 3em;
+}
+
+/* Small devices (phones and pocket devices, 576 and up) */
+@media screen and (min-width:200px) and (max-width: 768px) {
+    .nav-items:nth-child(1){
+      flex-basis: 200px;
+    }
+
+    .nav-items:nth-child(3){
+        flex-basis: 350px;
+        justify-content: flex-end;
+        display: none;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width:768px) {
+    .nav-items:nth-child(3){
+        flex-basis: 350px;
+        justify-content: flex-end;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width:992px) {
+    body{
+        background-color: #72a391;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width:1200px) {
+    body{
+        background-color: #a5b6ae;
+    }
 }
