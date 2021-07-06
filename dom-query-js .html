@@ -5,7 +5,10 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
-
+<button id="main-head">Main Header</button>
+<button id="sub-head">Sub Header</button>
+<button id="list-items">List Items</button>
+<button id="sub-para">Sub Paragraph</button>
 <h1 id="main-header">Hello World!</h1>
 <ul>
     <li data-dbid="1">Item 1</li>
@@ -32,19 +35,42 @@
         var mainHeader = document.querySelector("#main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // mainHeader.innerHTML = "JavaScript is Cool";
+        var mainHeadButton = document.querySelector("#main-head");
+
+        var mainHeadChange = function () {
+            mainHeader.innerHTML = "JavaScript is Cool";
+        }
+
+        mainHeadButton.addEventListener("click", mainHeadChange);
+
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.querySelector("#sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        // subHeader.style.color = "blue";
+        var subHeadChange = function () {
+            subHeader.style.color = "blue";
+        }
+
+        var subHeadButton = document.querySelector("#sub-head");
+
+        subHeadButton.addEventListener("click", subHeadChange);
+
+
         // TODO: Uncomment the next line and get all list items
         var listItems = document.querySelectorAll("li");
 
         // TODO: Set text color on every other list item to grey
-        for(var i = 0; i < listItems.length; i += 2) {
-            listItems[i].style.color = "grey";
+        var changeListItems = function () {
+            for (var i = 0; i < listItems.length; i += 2) {
+                listItems[i].style.color = "grey";
+            }
         }
+
+        var listItemsChange = document.querySelector("#list-items");
+
+        listItemsChange.addEventListener("click", changeListItems)
 
         // TODO: Set text color of li with dbid = 1 to blue
 
@@ -55,10 +81,19 @@
         }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.querySelector(".sub-paragraph");
+        var subParagraphs = document.querySelectorAll(".sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs.innerHTML = "<h1>Mission Accomplished!</h1>";
+
+
+        var subParaButton = document.querySelector("#sub-para");
+
+        var subParaChange = function() {
+            subParagraphs[0].innerHTML = "<h1>Mission Accomplished!</h1>";
+        }
+
+        subParaButton.addEventListener("click", subParaChange);
+
     })();
 </script>
 </body>
