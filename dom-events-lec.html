@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Events</title>
+</head>
+<body>
+
+<h1>Hello world</h1>
+
+
+<label>
+    Search
+    <input id="searchBar" type="text">
+</label>
+
+
+<button>Remove All Events</button>
+
+
+<script>
+
+    //  var myHeader = document.querySelector("h1");
+    //
+    //  myHeader.innerText="I am JS edited version";
+    //
+    //  myHeader.addEventListener("mouseover",function (){
+    //    console.log("You clicked me!!")
+    //  })
+
+    var potentialResults = ["How to basic", "how to bake a cake", "I need help changing my brakes"];
+
+
+
+
+    var searchBarElement = document.getElementById("searchBar")
+
+    searchBarElement.addEventListener("change", searchCallBack)
+
+    function searchCallBack() {
+        potentialResults.forEach(function (result) {
+
+            var whatUserIsSearchingFor = searchBarElement.value
+
+            if (result.toLowerCase().includes(whatUserIsSearchingFor.toLowerCase())) {
+                console.log("Here is a potential result...")
+                console.log(result)
+            }
+
+        })
+    }
+
+
+
+
+
+    var buttonToDestroyAll = document.querySelector("button")
+
+    buttonToDestroyAll.addEventListener("click", destroyEvents)
+
+    function destroyEvents() {
+        searchBarElement.removeEventListener("change", searchCallBack)
+        buttonToDestroyAll.removeEventListener("click", destroyEvents)
+        console.log("Removing Events")
+    }
+
+    console.log(searchBarElement)
+
+
+</script>
+</body>
+</html>
