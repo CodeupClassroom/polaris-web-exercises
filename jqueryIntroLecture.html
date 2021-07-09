@@ -6,19 +6,33 @@
 </head>
 
 <body>
+<style>
+    .imgStuff{
+        width: 300px;
+        border-radius: 20px;
+        border: solid 2px red;
+    }
+</style>
 <h1>Welcome JQuery</h1>
 
-<div id="something">
+<div class="content" id="something">
 
     <p>This is pretty neat.</p>
     <p>Do ya'll think this is neat too?</p>
 
 </div>
 
-<img src="https://i.pinimg.com/originals/f5/25/6f/f5256f22b9dea5d4eb80c41f91f87793.jpg" alt="slowImg">
+<div class="content" id="somethingElse">
+
+    <p>This is bad practice.</p>
+
+    <img src="https://i.pinimg.com/originals/f5/25/6f/f5256f22b9dea5d4eb80c41f91f87793.jpg" alt="slowImg">
+
+</div>
+
 
 <!--We will load JQuery first-->
-<script src="./js/jquery-2.2.4.js"></script>
+<script src="./js/jquery.js"></script>
 
 <!--So that we can reference it later-->
 <script src="./js/externalJQuery.js" ></script>
