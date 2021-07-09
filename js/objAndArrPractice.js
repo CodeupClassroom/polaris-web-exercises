@@ -175,7 +175,7 @@ function max(arrayOfNumbers){
 //     return dateObject;
 //
 // }
-
+//
 
 
 // function dateStringToObject(string){

@@ -39,33 +39,33 @@
 // // TODO: Create a method on the object down below named getFullName that when called returns the users full name using the "this" key term.
 // // Example: personOne.getFullName() ---- returns ----> "silvia floopertan"
 //
-// var personOne = {
-//         firstName: "silvia",
-//         lastName: "floopertan",
-//         ageInYears: 34,
-//         heightInInches: 65
-// }
+var personOne = {
+        firstName: "silvia",
+        lastName: "floopertan",
+        ageInYears: 34,
+        heightInInches: 65
+}
 //
 // // TODO: Create a method on the object down below named getNicelyFormattedFullName that when called returns the
 // //  users full name with both first letters in the names being capitalized look at example down below for more reference.
 // // Example: personOne.getNicelyFormattedFullName() ---- returns ----> "Dan Valdarez"
 //
-// var personTwo = {
-//     firstName: "dan",
-//     lastName: "valdarez",
-//     ageInYears: 61,
-//     heightInInches: 73
-// }
+var personTwo = {
+    firstName: "dan",
+    lastName: "valdarez",
+    ageInYears: 61,
+    heightInInches: 73
+}
 //
 // // TODO: Create a method on the object below that gives us the behavior that the example implies.
 // // Example: personThree.intro() ---- returns ----> "Hello, My name is Arlene Martinez and I am 25 years old"
 //
-// var personThree = {
-//     firstName: "arlene",
-//     lastName: "martinez",
-//     ageInYears: 25,
-//     heightInInches: 62
-// }
+var personThree = {
+    firstName: "arlene",
+    lastName: "martinez",
+    ageInYears: 25,
+    heightInInches: 62
+}
 //
 
 // July 8th 2021
@@ -126,6 +126,28 @@ console.log(arrayOfObjectsToStrings(arrayOfObjects))
 //  as PersonOne, PersonTwo, and PersonThree. The functions job is to return an array of users that have heightInInches equal to or greater than 65.
 
 var people = [personOne,personTwo,personThree];
+
+function getTallUsers(arrayOfObjects){
+    var tallUsers = [];
+
+    for (let i = 0; i < arrayOfObjects.length; i++) {
+
+        var currentUser = arrayOfObjects[i];
+
+        var currentUsersHeight = currentUser.heightInInches;
+
+        var userIsTallEnough = currentUsersHeight >= 65
+
+        if (userIsTallEnough){
+            tallUsers.push(currentUser)
+        }
+
+    }
+
+    return tallUsers;
+}
+
+console.log(getTallUsers(people));
 
 // Example: getTallUsers(people)
 // ---- returns ----> [{firstName: "silvia", lastName: "floopertan", ageInYears: 34, heightInInches: 65},
