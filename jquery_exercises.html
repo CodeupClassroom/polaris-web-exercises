@@ -5,12 +5,40 @@
     <title>Jquery</title>
 </head>
 <body>
-<h1>Jquery Intro Exercise</h1>
+<div class="main-content">
+    <h1 id="main-header">jQuery Selectors Exercise</h1>
+
+    <p id="cool-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet autem consequuntur
+        cupiditate debitis ea, impedit iusto libero mollitia nobis placeat quidem quo suscipit totam vel
+        veritatis voluptates. Consequuntur, voluptatem!
+    </p>
+    <ul class="jazz-giants">
+        <li class="codeup" id="trane">Coltrane</li>
+        <li class="codeup" id="bird">Bird</li>
+        <li class="codeup" id="dizzy">Gillespie</li>
+    </ul>
+    <!--    <button id="remover">Remove</button>-->
+</div>
 <script src="./js/jquery.js" ></script>
 <script>
   "use strict"
   $(document).ready(function() {
-    alert( 'The DOM has finished loading!' );
+    alert($('h1').html());
+
+    // $('.codeup').css('border', 'solid 1px red');
+
+      // $('li').css('font-size', '20px');
+
+      $('h1, p, li').css('background-color', 'yellow');
+
+
+
+
+
+
+
+
+
   });
 
 
