@@ -69,6 +69,11 @@
         }
 
 
+        function toggleGreenClass(selector){
+            $(selector).toggleClass("green")
+        }
+
+
 
         $("main").addClass("huge")
 
@@ -76,18 +81,33 @@
             $(selector).removeClass()
         }
 
+        $("*").removeClass()
 
         setTimeout(function () {
-            removeAllClasses("main")
+            toggleGreenClass("h1")
+        },1000)
+
+        setTimeout(function () {
+            toggleGreenClass("p")
+        },2000)
+
+        setTimeout(function () {
+            toggleGreenClass("main")
         },3000)
 
+
+
         setTimeout(function () {
-            removeAllClasses(".green")
-        },4000)
+            removeAllClasses("h1")
+        }, 4000)
+
+        setTimeout(function () {
+            removeAllClasses("p")
+        },5000)
 
         setTimeout(function () {
             removeAllClasses("*")
-        },5000)
+        },6000)
 
 
 
@@ -101,6 +121,14 @@
         AnHOne.click(toggleHugeClass)
 
     // This is dynamically generating the html pages contents
+
+        $.ajax("data/stuff.json", {
+            type: "POST",
+            data: {
+                name: "bob",
+                location: "jobton"
+            }
+        });
 
     })
 

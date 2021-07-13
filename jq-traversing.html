@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traversing</title>
+</head>
+<body>
+
+<h1>Traversing</h1>
+
+<section>
+    <h2>Each Method</h2>
+
+    <h3>Example</h3>
+    <article>
+        <p>Hello there friends</p>
+        <p>Today we will will be talking about the each method.</p>
+        <p>The each method works a lot like a <code>forEach</code> loop</p>
+        <p>It allows us to iterate through all of the elements selected</p>
+
+    </article>
+
+    <h3>Example</h3>
+    <article>
+        <h4>List of cool stuff</h4>
+        <ul id="each">
+            <li>Linux</li>
+            <li>Apache</li>
+            <li>MySQL</li>
+            <li>PHP</li>
+            <li>Javascript</li>
+        </ul>
+    </article>
+
+
+</section>
+<div>
+    Contents
+</div>
+<section>
+    <h2>First Method</h2>
+
+    <h3>Description</h3>
+
+    <article>
+        <p>Hello there friends</p>
+        <p>Today we will will be talking about the first method.</p>
+        <p>The first method works a lot like selecting an array as such <code>array[0]</code></p>
+        <p>It allows us to select the first element in our collection of elements</p>
+    </article>
+
+    <h3>Example</h3>
+    <article>
+        <h4>List of cool stuff</h4>
+        <ul id="stackTools">
+            <li>Linux</li>
+            <li>Apache</li>
+            <li>MySQL</li>
+            <li>PHP</li>
+            <li>Javascript</li>
+        </ul>
+    </article>
+
+
+</section>
+
+<section>
+    <h2>Last Method</h2>
+
+    <h3>Description</h3>
+
+    <article>
+        <p>Hello there friends</p>
+        <p>Today we will will be talking about the first method.</p>
+        <p>The last method works a lot like selecting an array as such <code>array[array.length - 1]</code></p>
+        <p>It allows us to select the last element in our collection of elements</p>
+    </article>
+
+    <h3>Example</h3>
+    <article>
+        <h4>List of cool stuff</h4>
+        <ul id="last">
+            <li>Linux</li>
+            <li>Apache</li>
+            <li>MySQL</li>
+            <li>PHP</li>
+            <li>Javascript</li>
+        </ul>
+    </article>
+
+
+</section>
+
+<section>
+    <h2>Children Method</h2>
+
+    <h3>Description</h3>
+
+    <article>
+        <p>Hello there friends</p>
+        <p>Today we will will be talking about the first method.</p>
+        <p>The each method works a lot like selecting an array as such <code>array[array.length - 1]</code></p>
+        <p>It allows us to select the last element in our collection of elements</p>
+    </article>
+
+    <h3>Example</h3>
+    <article>
+        <h4>National Parks</h4>
+        <ul id="children">
+            <li class="ReallyCoolPark">Arches</li>
+            <li>Badlands</li>
+            <li class="ReallyCoolPark">Carlsbad Caverns</li>
+            <li>Denali</li>
+            <li class="ReallyCoolPark">Everglades</li>
+        </ul>
+        <h3>State Parks of Texas</h3>
+        <ul id="state-parks-texas">
+            <li class="LoneChild">Abilene</li>
+            <li>Big Bend</li>
+            <li>Choke Canyon</li>
+            <li>Davis Mountains</li>
+            <li>Enchanted Rock</li>
+        </ul>
+    </article>
+
+
+</section>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossOrigin="anonymous"></script>
+<script>
+    "use strict"
+    $(document).ready(function () {
+
+
+        // Each Method
+        // var unOrderedList_Each = $("#each").css({"color":"blue"})
+        //
+        // console.log(unOrderedList_Each)
+        //
+        // var listItems = $("#each > li");
+        //
+        // console.log(listItems)
+        //
+        // var vanilla = document.querySelectorAll("#each > li")
+        //
+        // console.log(vanilla)
+        //
+        // listItems.each(function (index){
+        //
+        //     if (index % 2 === 1) {
+        //         $(this).css({"color": "red"})
+        //     }else {
+        //         $(this).css({"color": "orange"})
+        //     }
+        //
+        // })
+
+
+        // First Method
+        // var listItems = $("#stackTools > li");
+        // listItems.css({"color":"pink"})
+        //
+        // listItems.first().css({"background-color":"yellow"}).html("I am the first Value")
+
+
+        //Last Method
+        // var listItems = $("#last > li");
+        // listItems.css({"color":"purple"})
+        //
+        // listItems.last().css({"background-color":"pink"}).html("I am the last item in the collection").css({"font-size":"3em"})
+
+
+        //children Method
+        // var unOrderedList = $("#children");
+        // // console.log(listItems);
+        //
+        //
+        //
+        // // listItems.html("I am a child")
+        // //
+        // unOrderedList.children(".ReallyCoolPark").html("I am a child")
+
+
+        // var childLI = $(".LoneChild")
+        //
+        // console.log(childLI);
+        // console.log("THIS is the parent");
+        // childLI.parent().css({"background-color":"yellow"}).html("I ate my children")
+
+        var firstSection = $("section").first()
+
+        console.log(firstSection)
+        console.log(firstSection.next())
+
+
+    })
+</script>
+</body>
+</html>
