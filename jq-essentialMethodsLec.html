@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Essential Oils</title>
+</head>
+<body>
+<style>
+
+
+
+
+    .huge{
+        font-size: 5em;
+    }
+
+    .green{
+        color: green;
+    }
+
+</style>
+
+<!--<h1>Essential Oils</h1>-->
+<main>
+
+</main>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossOrigin="anonymous"></script>
+<script>
+    "use strict"
+
+    $(document).ready(function () {
+        $("main").html("<h1>Essential Oils</h1><p class='green huge' >Hello world</p>").css(
+            {
+                "background-color":"red",
+                "border":"solid 3px blue"
+            }
+        )
+
+
+        var mainsCurrentHTML = $("main").html()
+
+        $("main").html(mainsCurrentHTML + "<p>I will not overwrite the contents above</p>")
+
+
+        var headerValue = $("h1").html("Essential Methods")
+
+        $("main").append("<p>I was <strong>appended</strong></p>")
+
+        console.log(headerValue)
+
+
+        $("p").addClass("huge")
+
+        function removeClassFromPTags(){
+            $("p").removeClass("huge green")
+            $("main").removeClass("huge")
+        }
+
+        var AnHOne = $("h1");
+
+        function toggleHugeClass(){
+            AnHOne.toggleClass("huge")
+        }
+
+
+
+        $("main").addClass("huge")
+
+        function removeAllClasses(selector){
+            $(selector).removeClass()
+        }
+
+
+        setTimeout(function () {
+            removeAllClasses("main")
+        },3000)
+
+        setTimeout(function () {
+            removeAllClasses(".green")
+        },4000)
+
+        setTimeout(function () {
+            removeAllClasses("*")
+        },5000)
+
+
+
+
+
+        // setTimeout(removeClassFromPTags,2000);
+
+        // This allows
+        // setInterval(toggleHugeClass,1000)
+
+        AnHOne.click(toggleHugeClass)
+
+    // This is dynamically generating the html pages contents
+
+    })
+
+
+
+</script>
+</body>
+</html>
