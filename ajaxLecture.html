@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+<h1>Axaj Requests</h1>
+
+<p>loading...</p>
+
+<main id="mainContent">
+
+</main>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossOrigin="anonymous"></script>
+<script>
+    "use strict"
+    $(document).ready(function () {
+
+        // $.ajax("data/user.json")
+        //     .done(function (data, status) {
+        //         alert("AJAX call completed successfully!");
+        //         console.log("Request status: " + status);
+        //         console.log("Data returned from server:");
+        //         console.log(data);
+        //     })
+        //     .fail(function(jqXhr, status, error) {
+        //         alert("There was an error! Check the console for details");
+        //         console.log("Response status: " + status);
+        //         console.log("Error object: " + error);
+        //     })
+
+
+        $.ajax("https://raw.githubusercontent.com/CodeupClassroom/polaris-web-exercises/main/data/users.json",{
+            type: "GET",
+            dataType: "json"
+        }).done(function (data, status, jqXhr) {
+            data
+
+            var htmlMessages = ""
+
+            for (let i = 0; i < data.length; i++) {
+                var currentUser = data[i]
+                console.log(currentUser)
+                $("#mainContent").append("<p>"+ currentUser.first_name + " " + currentUser.last_name +"</p><img src='" + currentUser.gender + "'><br>")
+            }
+
+
+
+            // var htmlMessage = "<p>"+ firstUser.first_name + " " + firstUser.last_name +"</p>"
+
+
+
+            // $("#mainContent").html(htmlMessages)
+        })
+        .fail(function(jqXhr, status, error) {
+            console.log("Response status: " + status);
+            console.log(error);
+        }).always(function (){
+            alert("Ajax request has finished")
+        })
+
+
+    })
+
+</script>
+</body>
+</html>

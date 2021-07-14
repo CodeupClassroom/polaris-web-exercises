@@ -2,5 +2,9 @@
   {
   "name": "John",
   "location": "Boston"
-}
+},
+  {
+    "name": "Oswald0",
+    "location": "Texas"
+  }
 ]
