@@ -7,6 +7,17 @@
         .invisible {
             visibility: hidden;
         }
+
+        .photos {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .photo {
+            height: 300px;
+            width: 250px;
+
+        }
     </style>
 </head>
 <body>
@@ -47,6 +58,39 @@
 
 <button class="toggler">Toggle DD's Visibility</button>
 
+<h3 id="arches">Arches</h3>
+<ul id="arches-facts" class="facts">
+    <li>In 1929 President Herbert Hoover created Arches National Monument, then in 1971 Congress designated Arches as a National Park under the Nixon administration.</li>
+    <li>There are more than 2000 natural sandstone arches inside Arches National Park.</li>
+    <li>Landscape Arch has the longest span of any arch in North America, 306 feet (93.3 meters), and is the fourth longest in the world</li>
+    <li>The enormous sandstone boulder atop Balanced Rock is presumed to weigh approximately 3,577 tons!</li>
+</ul>
+<h3 id="badlands">Badlands</h3>
+<ul id="badlands-facts" class="facts">
+    <li>Bison, commonly known as buffalo, can be seen throughout the park.</li>
+    <li>Badlands lies in an ecological area known as a mixed-grass prairie.</li>
+    <li>The Badlands National Park area is known worldwide for its large number of fossil remains.</li>
+    <li>The name Badlands comes from the Lakota, who first called it “mako sica”, or “land that is bad”.</li>
+</ul>
+<h3 id="joshua">Joshua Tree</h3>
+<ul id="joshua-facts" class="facts">
+    <li>As part of the Desert Protection Bill, Joshua Tree National Monument was elevated to national park status on October 31, 1994.</li>
+    <li>Early explorer John Fremont described Joshua trees as “the most repulsive tree in the vegetable Kingdom”.</li>
+    <li>Mormon pioneers thought the limbs of the Joshua trees resembled the upstretched arms of Joshua leading them to the promised land.</li>
+    <li>More than 550,000 acres of Joshua Tree National Park’s nearly 800,000 acres are designated as wilderness.</li>
+</ul>
+
+<button id="highlighter">Highlight Last Facts</button>
+
+<div class="photos">
+    <div class="photo" id="first"></div>
+    <button id="button-1">Swap One</button>
+    <div class="photo" id="second"></div>
+    <button id="button-2">Swap Two</button>
+    <div class="photo" id="third"></div>
+    <button id="button-3">Swap Three</button>
+</div>
+
 <script src="./js/jquery.js" ></script>
 <script>
 
@@ -72,6 +116,75 @@
             $(this).css('background-color', 'yellow')
         });
 
+        // Create a button that, when clicked, makes the last li in each ul have a yellow background.
+        //
+        // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+        //
+        // When any list item is clicked, first li of the parent ul should have a font color of blue.
+
+
+
+        $('#highlighter').click(function () {
+            $('ul').each(function () {
+                $(this).children().last().css('background-color', 'yellow');
+            });
+        });
+
+        $('h3').click(function () {
+            $(this).next().children().css('font-weight', 'bold');
+        });
+
+        $('li').click(function () {
+            $(this).parent().children().first().css('color', 'blue');
+        });
+
+
+
+
+        // BONUS:
+
+        var imageUrl = "images/ducksInASink.jpeg";
+        var imageUrl2 = "images/oldLightPost.jpeg";
+        var imageUrl3 = "images/orange.jpeg";
+
+        $('#first').css("background-image", "url(" + imageUrl + ")");
+        $('#second').css("background-image", "url(" + imageUrl2 + ")");
+        $('#third').css("background-image", "url(" + imageUrl3 + ")");
+
+        function swapFirstTwo() {
+            var image2 = $('#second').css("background-image");
+            var image1 = $('#first').css("background-image");
+            $('#first').css('background-image', image2);
+            $('#second').css('background-image', image1);
+        }
+
+        function swapLastTwo() {
+            var image3 = $('#third').css("background-image");
+            var image2 = $('#second').css("background-image");
+            $('#third').css('background-image', image2);
+            $('#second').css('background-image', image3);
+        }
+
+        $('#button-1').click(swapFirstTwo);
+
+        $('#button-3').click(swapLastTwo);
+
+        $('#button-2').click(function () {
+            var image3 = $('#third').css("background-image");
+            var image1 = $('#first').css("background-image");
+            var arrayOfImages = [image3, image1];
+
+            var randomImage = arrayOfImages[Math.floor(Math.random() * arrayOfImages.length)]
+
+            if (randomImage === image1){
+                swapFirstTwo();
+            }
+
+            if (randomImage === image3){
+                swapLastTwo();
+            }
+
+        });
 
 
 
