@@ -21,7 +21,7 @@
         center: [-98.4916, 29.4252]
     });
 
-    var marker = new mapboxgl.Marker()
+    var marker = new mapboxgl.Marker({ draggable:true})
         .setLngLat([-98.45251678925071,29.567244316609294])
         .addTo(map);
 
@@ -36,24 +36,62 @@
 
     var locationToSearchFor = "300 Alamo Plaza, San Antonio, TX 78205"
 
-    geocode(locationToSearchFor,mapboxAPIKey).then(function(alamoCoordinates){
-        console.log(`Here are the cordanates for the following location ${locationToSearchFor}`)
-        console.log(alamoCoordinates)
 
-        var alamoMarker = new mapboxgl.Marker()
-            .setLngLat(alamoCoordinates)
-            .addTo(map);
+    function findByAddress(searchTerm) {
 
-        var alamoPopup = new mapboxgl.Popup()
-            // .setLngLat([-98.45251678925071,29.567244316609294])
-            .setHTML("<p>The Alamo</p>")
-            // .setMaxWidth("100px")
-            .addTo(map)
+        geocode(searchTerm, mapboxAPIKey).then(function (alamoCoordinates) {
+            console.log(`Here are the cordanates for the following location ${locationToSearchFor}`)
+            console.log(alamoCoordinates)
 
-        alamoMarker.setPopup(alamoPopup)
+            var alamoMarker = new mapboxgl.Marker()
+                .setLngLat(alamoCoordinates)
+                .addTo(map);
 
-    })
+            var alamoPopup = new mapboxgl.Popup()
+                // .setLngLat([-98.45251678925071,29.567244316609294])
+                .setHTML("<p>The Alamo</p>")
+                // .setMaxWidth("100px")
+                .addTo(map)
 
+            alamoMarker.setPopup(alamoPopup)
+
+        })
+
+    }
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        coordinates.style.display = 'block';
+        coordinates.innerHTML =
+            'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+    }
+
+    marker.on('dragend', onDragEnd);
+
+
+    var usersLocation = prompt("What place would you like to look at?")
+
+    findByAddress(usersLocation)
+
+    29.85626647062825, -98.23293981421361
+
+    var cordnatesToSearchBy = {lng: -98.23293981421361, lat: 29.85626647062825}
+
+
+
+
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+
+        reverseGeocode(lngLat,mapboxAPIKey).then(function (data){
+            console.log(data)
+        })
+
+           console.log("Longatude: "+lngLat.lng + 'Latitude: ' + lngLat.lat);
+    }
+
+    marker.on('dragend', onDragEnd);
 
 
 </script>
