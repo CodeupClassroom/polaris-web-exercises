@@ -8,5 +8,6 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery-3.5.1.slim" level="application" />
     <orderEntry type="library" name="jquery-2.2.4" level="application" />
+    <orderEntry type="library" name="mapbox-gl" level="application" />
   </component>
 </module>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MapBox</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+
+<div id='map' style='width: 98vw; height: 98vh;'></div>
+<script src="./js/keys.js"></script>
+<script src="./js/mapbox-geocoder-utils.js"></script>
+<script>
+    mapboxgl.accessToken = mapboxAPIKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    });
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-98.45251678925071,29.567244316609294])
+        .addTo(map);
+
+    var popup = new mapboxgl.Popup()
+        // .setLngLat([-98.45251678925071,29.567244316609294])
+        .setHTML("<img width='50px' height='auto' src='https://static01.nyt.com/images/2021/02/17/dining/17tootired-grilled-cheese/17tootired-grilled-cheese-articleLarge.jpg?quality=75&auto=webp&disable=upscale' >")
+        // .setMaxWidth("100px")
+        .addTo(map)
+
+
+    marker.setPopup(popup)
+
+    var locationToSearchFor = "300 Alamo Plaza, San Antonio, TX 78205"
+
+    geocode(locationToSearchFor,mapboxAPIKey).then(function(alamoCoordinates){
+        console.log(`Here are the cordanates for the following location ${locationToSearchFor}`)
+        console.log(alamoCoordinates)
+
+        var alamoMarker = new mapboxgl.Marker()
+            .setLngLat(alamoCoordinates)
+            .addTo(map);
+
+        var alamoPopup = new mapboxgl.Popup()
+            // .setLngLat([-98.45251678925071,29.567244316609294])
+            .setHTML("<p>The Alamo</p>")
+            // .setMaxWidth("100px")
+            .addTo(map)
+
+        alamoMarker.setPopup(alamoPopup)
+
+    })
+
+
+
+</script>
+
+
+</body>
+</html>
