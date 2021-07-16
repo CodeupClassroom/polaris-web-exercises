@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<select id="zoom-select">
+    <option selected disabled>Zoom Level</option>
+    <option value="5">Zoom Level 5</option>
+    <option value="9">Zoom Level 9</option>
+    <option value="15">Zoom Level 15</option>
+    <option value="20">Zoom Level 20</option>
+</select>
+
+<div id='map' style='width: 98vw; height: 98vh;'></div>
+<script src="./js/keys.js"></script>
+<script src="./js/mapbox-geocoder-utils.js"></script>
+<script>
+
+    mapboxgl.accessToken = MAPBOX_KEY;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-96.808891, 32.779167]
+    });
+
+    // map.setZoom(20);
+
+    var restaurants = [
+        {
+            name: "Taverna",
+            address: "3312 Knox St, Dallas, TX 75205"
+        },
+        {
+            name: "Meso Maya",
+            address: "5280 Beltline Rd, Dallas, TX 75254"
+        },
+        {
+            name: "First Watch",
+            address: "1551 N Belt Line Rd Ste 100, Coppell, TX 75019"
+        }
+    ]
+
+
+    restaurants.forEach(function (restaurant) {
+        geocode(restaurant.address, MAPBOX_KEY).then(function(coordinates) {
+
+            var marker = new mapboxgl.Marker()
+                .setLngLat(coordinates)
+                .addTo(map);
+
+            var popup = new mapboxgl.Popup()
+                .setHTML(restaurant.name)
+            // .addTo(map)
+
+            marker.setPopup(popup)
+        });
+    })
+
+
+
+
+
+    var zoomSelect = document.getElementById('zoom-select');
+    console.log(zoomSelect);
+
+    zoomSelect.addEventListener('change', function(){
+        console.log('Zoom level change.');
+        var zoomValue = zoomSelect.options[zoomSelect.selectedIndex].value;
+
+        map.setZoom(zoomValue);
+    });
+
+</script>
+
+
+</body>
+</html>
