@@ -13,14 +13,20 @@
   "use strict"
   $(document).ready(function () {
 
-
     $.get(`https://api.openweathermap.org/data/2.5/weather`, {
       appid: OpenWeatherAPIKey,
       q:     "San Antonio, US",
       units: "imperial"
     });
 
-
+      $.get(`https://api.openweathermap.org/data/2.5/onecall`, {
+          appid: OpenWeatherAPIKey,
+          units: "imperial",
+          lat: 12,
+          lon: 34
+      }).done(function (data){
+          console.log(data)
+      })
 
 
   })
