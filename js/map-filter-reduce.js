@@ -80,11 +80,16 @@ let nameString = users.reduce(function (accumulator, user) {
 
 console.log(nameString + ".");
 
+
+// ALTERNATE SOLUTION USING MAP
 let nameStringMap = users.map(function (user) {
     return user.name;
 })
 
 console.log("Your instructors are: " + nameStringMap + ".");
+
+
+// BONUS
 
 
 let concatLangs = users.reduce(function (accumulator, user) {
